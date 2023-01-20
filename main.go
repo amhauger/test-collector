@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 
+	"github.com/rs/zerolog/log"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/exporters/otlp/otlptrace"
@@ -54,6 +55,8 @@ func main() {
 		panic(err)
 	}
 	defer shutdownFunc()
+
+	log.Info().Msg("Hello Worrld")
 
 	tracer := otel.Tracer("test-collector.main")
 	_, mainSpan := tracer.Start(
