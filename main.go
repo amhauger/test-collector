@@ -19,7 +19,7 @@ func setupOtel() (func(), error) {
 	client := otlptracegrpc.NewClient(
 		otlptracegrpc.WithEndpoint("api.honeycomb.io:443"),
 		otlptracegrpc.WithHeaders(map[string]string{
-			"x-honeycomb-team": "zewOz9u27ik8uAW12ER8PA",
+			"x-honeycomb-team": "feJIrcsnDM5Qyzjbxe2nra",
 		}),
 		otlptracegrpc.WithTLSCredentials(credentials.NewClientTLSFromCert(nil, "")),
 	)
